@@ -1,3 +1,5 @@
+import './style.css';
+// import './bootstrap.css';
 
 //this function stores our state
 const storeState = (initialState) => {
