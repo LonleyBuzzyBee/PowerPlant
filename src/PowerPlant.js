@@ -32,13 +32,23 @@ const changeState = (prop) => {
 
 // const feed = changeState("soil");
 const blueFood = changeState("soil")(5);
-
+const filteredWater = changeState("water")(5);
+const addSun = changeState("light")(5);
+//feed(5)(plant)
 $(document).ready(function () {
   
   //this function has side effects because we are using jquery. Manipulating the DOM will always be a side effect.
   $("#feed").click(function () {
     const newState = stateChanger(blueFood);
     $('#soil-value').text(newState.soil);
+  });
+  $("#water").click(function () {
+    const newState = stateChanger(filteredWater);
+    $('#water-value').text(newState.water);
+  });
+  $("#light").click(function () {
+    const newState = stateChanger(addSun);
+    $('#light-value').text(newState.light);
   });
 });
 
