@@ -1,10 +1,4 @@
-// class Plant {
-//   constructor() {
-//     this.water = 0;
-//     this.soil = 0;
-//     this.light = 0;
-//   }
-// }
+
 //this function stores our state
 const storeState = () => {
   let currentState = {};
@@ -27,6 +21,14 @@ const changeState = (prop) => {
     });
   };
 };
+const changeStateString = (prop) => {
+  return (value) => {
+    return (state) => ({
+      ...state,
+      [prop]: (state[prop] ||value ) 
+    });
+  };
+};
 
 //we creat two functions using our function factory. we could easily create many more.
 
@@ -34,6 +36,7 @@ const changeState = (prop) => {
 const blueFood = changeState("soil")(5);
 const filteredWater = changeState("water")(5);
 const addSun = changeState("light")(5);
+const addPlant = changeStateString("plant")("plant");
 //feed(5)(plant)
 $(document).ready(function () {
   
@@ -49,6 +52,10 @@ $(document).ready(function () {
   $("#light").click(function () {
     const newState = stateChanger(addSun);
     $('#light-value').text(newState.light);
+  });
+  $("#plant").click(function () {
+    const newState = stateChanger(addPlant);
+    $('#plant-value').text(newState.plant);
   });
 });
 
