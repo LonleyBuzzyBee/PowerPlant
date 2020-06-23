@@ -8,16 +8,38 @@
 <body>
   <div class="container">
     <div class="grow-buttons">
-      <button class="btn-success" id="plant">Make Plant</button>
+      <form id="form1">
+        <label for="plant">Name:</label>
+        <input type="text" id="plant" name="plant" >
+        <button type="submit" class="btn-success" >Submit</button>
+      </form> 
       <button class="btn-success" id="feed">Add soil</button>
       <button class="btn-success" id="water">water</button>
       <button class="btn-success" id="light">give it some sun</button>
     </div>
     <h3>Name: <div id="plant-value"></div></h3>
     <h1>Your Plant's Values</h1>
-    <h3>Soil: <div id="soil-value">0</div></h3>
-    <h3>Water: <div id="water-value">0</div></h3>
-    <h3>Light: <div id="light-value">0</div></h3>
+    <h3>Soil: <div id="soil-value"></div></h3>
+    <h3>Water: <div id="water-value"></div></h3>
+    <h3>Light: <div id="light-value"></div></h3>
+  </div> <br>
+  <div  class="newPlant">
+    <button class="btn-success" id="reset">Make a new plant</button> 
+    <br> <br>
+    <form id="form2">
+      <label for="newPlant">Name:</label>
+      <input type="text" id="newPlant" name="newPlant" >
+      <button type="submit" class="btn-success" >Submit</button>
+    </form> 
+    
+    <button class="btn-success" id="nFeed">Add soil</button>
+    <button class="btn-success" id="nWater">water</button>
+    <button class="btn-success" id="nLight">give it some sun</button>
+    <br>
+    <h3>Name: <div id="newP-name"></div></h3>
+    <h3>Soil: <div id="newP-soil"></div></h3>
+    <h3>Water: <div id="newP-water"></div></h3>
+    <h3>Light: <div id="newP-light"></div></h3>
   </div>
 </body>
 </html>
